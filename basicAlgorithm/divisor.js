@@ -1,17 +1,35 @@
 const readline = require("readline");
+
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
+  input: process.stdin,
+  output: process.stdout,
 });
 
-rl.on("line",(line) => {
-    let index = 1;
-    while (index<=line) {
-        if (line % index ==0) {
-        console.log(index);
-        }
-        index++
+var input;
+
+rl.on("line", function (line) {
+  input = parseInt(line);
+  rl.close();
+}).on("close", function () {
+  var i = 1;
+  var total = 0;
+  var count = 0;
+
+
+
+  var result = '';
+  
+  while (input >= i) {
+    if (input % i == 0) {
+      if (count % 10 == 0) {
+        console.log(result);
+        result = [];
+      }
+      result += i;
+      result += ' ';
+      count += 1;
     }
-}).on("close",()=> {
-    process.exit();
+  i += 1;
+  }
+  console.log(result);
 });
