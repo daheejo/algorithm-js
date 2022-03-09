@@ -7,7 +7,6 @@
 // 안 촉촉한 초코칩 나라에 살던 안 촉촉한 초코칩이 촉촉한 초코칩 나라의 촉촉한 초코칩을 보고 촉촉한 초코칩이 되고 싶어서 촉촉한 초코칩 나라에 갔는데 촉촉한 초코칩 나라의 문지기가 "넌 촉촉한 초코칩이 아니고 안 촉촉한 초코칩이니까 안 촉촉한 초코칩 나라에서 살아"라고 해서 안 촉촉한 초코칩은 촉촉한 초코칩이 되는 것을 포기하고 안 촉촉한 초코칩 나라로 돌아갔다네
 // 출력 예시 2
 // 13
-
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -15,16 +14,15 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+var rap;
 
 rl.on("line", function (line) {
-    let arr = [];
-    arr.push(line);
-    if  arr.match(/촉촉한 초코칩/) == false {
-        console.log('no match');
-    } else {
-        console.log(str.match(regex).length);
-    }
+  rap = line;
+  rl.close();
 }).on("close", function () {
-    
-    process.exit();
+  if (rap.includes('촉촉한 초코칩')) {
+    console.log(rap.match(/촉촉한 초코칩/g).length);
+  } else {
+    console.log(0);
+  }
 });
