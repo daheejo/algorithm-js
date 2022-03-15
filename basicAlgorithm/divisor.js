@@ -19,7 +19,7 @@ rl.on("line", function (line) {
     if (input % i == 0) {
       if (count % 10 == 0) {
         console.log(result);
-        result = [];
+        result = '';//or []
       }
       result += i;
       result += ' ';
