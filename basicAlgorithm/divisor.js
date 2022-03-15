@@ -14,9 +14,6 @@ rl.on("line", function (line) {
   var i = 1;
   var total = 0;
   var count = 0;
-
-
-
   var result = '';
   
   while (input >= i) {
@@ -33,3 +30,9 @@ rl.on("line", function (line) {
   }
   console.log(result);
 });
+
+//약수 10개씩 출력
+//입력 예시 : 60
+//출력 예시
+//1 2 3 4 5 6 10 12 15 20
+//30 60
