@@ -20,8 +20,8 @@ rl.on("line", function (line) {
   rap = line;
   rl.close();
 }).on("close", function () {
-  if (rap.includes('촉촉한 초코칩')) {
-    console.log(rap.match(/촉촉한 초코칩/g).length);
+  if (rap.includes('촉촉한 초코칩')) { //rap이 촉촉한 초코칩을 포함한다면,
+    console.log(rap.match(/촉촉한 초코칩/g).length); // 촉촉한 초코칩을 match한 후 length 구하기
   } else {
     console.log(0);
   }
