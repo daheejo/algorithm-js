@@ -7,9 +7,6 @@ const rl = readline.createInterface({
 
 var input = [];
 
-
-
-
 rl.on("line", function (line) {
   
   input.push(parseInt(line));
@@ -21,8 +18,6 @@ rl.on("line", function (line) {
   var x = input[0];
   var y = input[1];
   var ans = (6 + y) / (16 + x);
-
-
 
 
   if (Math.floor(ans * 10) != 0) {
