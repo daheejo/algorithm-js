@@ -12,7 +12,6 @@ rl.on("line", function (line) {
   rl.close();
 }).on("close", function () {
   var i = 1;
-  var total = 0;
   var count = 0;
   var result = '';
   
