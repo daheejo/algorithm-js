@@ -12,7 +12,7 @@ function fib(n) {
         let b = result[i-2];
         result.push(a+b);
     }
-    result.pop();
+    result.pop();       
     return result;
 };
 
@@ -43,9 +43,6 @@ rl.on("line", function (line) {
   n = parseInt(line);
   rl.close();
 }).on("close", function () {
-
-
-
   var fibo = [];
   
   if (n > 2) {
