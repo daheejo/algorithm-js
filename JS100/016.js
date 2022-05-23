@@ -12,3 +12,8 @@ for (let i =n.length-1;i>=0;i--){
 
 console.log(sen)
 
+//배열메소드 방법
+const m = '로꾸꺼'
+const reverseM= m.split('').reverse().join('')
+
+
